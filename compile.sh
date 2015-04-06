@@ -2,5 +2,5 @@
 flex uscan.l
 mv lex.yy.c uscan.c
 g++ -o execute *.c -ll
-./execute uMachine_code.il
+#./execute uMachine_code.il
 #rm execute
