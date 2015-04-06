@@ -1,0 +1,27 @@
+MOV SP D0
+PUSH SP
+PUSH #3 
+;Apples , Fred, X allocation
+ADDS
+POP SP
+
+
+MOV #0 0(D0)
+MOV #10 2(D0)
+
+PUSH 0(D0)
+PUSH 0(D0)
+PUSH 2(D0)
+MULS
+ADDS
+POP 1(D0)
+
+WRT #"Apples = "
+WRT 0(D0)
+WRT #"; X = "
+WRT 2(D0)
+WRT #" and Fred = "
+WRTLN 1(D0)
+
+MOV D0 SP
+HLT
