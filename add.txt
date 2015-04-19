@@ -1,0 +1,7 @@
+RD d0
+PUSH d0
+RD d0
+PUSH d0
+ADDS
+WRTLNS
+HLT

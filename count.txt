@@ -1,0 +1,25 @@
+;PRTS
+;PRTR
+; Get the initial values from the user
+L3:
+WRTLN #"Start number:"
+RD d0 ; this is the start
+WRTLN #"Increment by:"
+RD d1 
+WRTLN #"Stop at:"
+RD d2 
+
+MOV d0 d3 ; copy start into the running count
+
+WRTLN #"Sequence:"
+L1:
+WRTLN d3
+ADD d3 d1 d3 
+
+PUSH d2
+PUSH d3
+CMPGES
+
+BRTS L1
+
+HLT

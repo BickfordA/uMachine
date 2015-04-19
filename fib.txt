@@ -1,0 +1,49 @@
+
+; Get the initial values from the user
+L2:
+
+MOV #1 d1
+MOV #2 d2
+
+
+MOV d2 d3
+; Get the value to stop printing at
+WRTLN #"Stop at:"
+RD d4 
+
+;print out the sequence 
+WRTLN #"Sequence:"
+WRTLN d1
+L1:
+WRTLN d3
+
+;Add to find the next value in the sequence
+ADD d1 d2 d3 
+
+MOV d2 d1
+MOV d3 d2
+
+PUSH d4
+PUSH d3
+
+;check if we have reached the limit
+CMPGES
+;if not repeat the add loop
+BRTS L1
+
+L3:
+WRTLN #"Again?( yes -> 1/ no -> 0)"
+RD d5
+
+;check yes
+BEQ #1 d5 L2
+
+;check no
+BEQ #0 d5 L4
+
+;else repeat 
+BR L3
+
+L4:
+
+HLT

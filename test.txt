@@ -1,0 +1,3 @@
+RDS d0
+PUSH d0
+WRTLNS

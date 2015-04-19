@@ -1,0 +1,6 @@
+#!/bin/bash
+flex uscan.l
+mv lex.yy.c uscan.c
+llvm-g++  *.c  -S
+#./execute uMachine_code.il
+#rm execute
